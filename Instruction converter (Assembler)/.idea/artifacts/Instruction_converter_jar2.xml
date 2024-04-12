@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Instruction converter:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/Instruction_converter_jar2</output-path>
+    <root id="archive" name="Instruction converter.jar">
+      <element id="module-output" name="Instruction converter" />
+    </root>
+  </artifact>
+</component>
