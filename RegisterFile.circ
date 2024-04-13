@@ -66,8 +66,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <text font-family="SansSerif" font-size="6" text-anchor="middle" x="49" y="114">RegEn</text>
       <text font-family="SansSerif" font-size="6" text-anchor="middle" x="80" y="62">RegWrite</text>
       <text font-family="SansSerif" font-size="6" text-anchor="middle" x="148" y="110">CLK</text>
-      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="49" y="90">WriteDara</text>
-      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="156" y="92">ReadData</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="47" y="90">WriteDara</text>
+      <text font-family="SansSerif" font-size="6" text-anchor="middle" x="155" y="92">ReadData</text>
       <circ-port height="8" pin="50,70" width="8" x="136" y="116"/>
       <circ-port height="8" pin="50,100" width="8" x="46" y="116"/>
       <circ-port height="8" pin="50,130" width="8" x="76" y="46"/>
@@ -88,38 +88,18 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(530,210)" to="(530,260)"/>
     <wire from="(570,280)" to="(570,330)"/>
     <wire from="(410,290)" to="(450,290)"/>
-    <comp lib="0" loc="(570,330)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="CLK"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(640,260)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="ReadReg"/>
-    </comp>
-    <comp lib="0" loc="(580,310)" name="Constant">
-      <a name="facing" val="north"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(110,190)" name="Pin">
-      <a name="width" val="16"/>
+    <comp lib="0" loc="(50,100)" name="Pin">
       <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(160,190)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="WriteData"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
     <comp lib="0" loc="(530,210)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="width" val="16"/>
       <a name="label" val="WriteData"/>
     </comp>
-    <comp lib="1" loc="(500,270)" name="AND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="4" loc="(590,260)" name="Register">
+    <comp lib="0" loc="(160,190)" name="Tunnel">
       <a name="width" val="16"/>
+      <a name="label" val="WriteData"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
     <comp lib="0" loc="(80,70)" name="Tunnel">
       <a name="label" val="CLK"/>
@@ -128,31 +108,26 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="0" loc="(50,70)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
+    <comp lib="0" loc="(570,330)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="CLK"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
     <comp lib="0" loc="(410,290)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="RegWrite"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
-    <comp lib="0" loc="(90,310)" name="Tunnel">
-      <a name="facing" val="east"/>
+    <comp lib="4" loc="(590,260)" name="Register">
       <a name="width" val="16"/>
-      <a name="label" val="ReadReg"/>
+    </comp>
+    <comp lib="0" loc="(80,130)" name="Tunnel">
+      <a name="label" val="RegWrite"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
-    <comp lib="0" loc="(80,100)" name="Tunnel">
-      <a name="label" val="RegEn"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(50,130)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(400,250)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="RegEn"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(50,100)" name="Pin">
-      <a name="tristate" val="false"/>
+    <comp lib="0" loc="(580,310)" name="Constant">
+      <a name="facing" val="north"/>
+      <a name="value" val="0x0"/>
     </comp>
     <comp lib="0" loc="(140,310)" name="Pin">
       <a name="facing" val="west"/>
@@ -161,8 +136,33 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="tristate" val="false"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
-    <comp lib="0" loc="(80,130)" name="Tunnel">
-      <a name="label" val="RegWrite"/>
+    <comp lib="0" loc="(640,260)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="ReadReg"/>
+    </comp>
+    <comp lib="0" loc="(400,250)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="RegEn"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(50,130)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(110,190)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(90,310)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="ReadReg"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="1" loc="(500,270)" name="AND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(80,100)" name="Tunnel">
+      <a name="label" val="RegEn"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
   </circuit>
@@ -186,12 +186,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <circ-port height="8" pin="120,100" width="8" x="76" y="56"/>
       <circ-port height="8" pin="170,180" width="8" x="46" y="66"/>
       <circ-port height="8" pin="170,330" width="8" x="46" y="96"/>
-      <circ-port height="8" pin="360,180" width="8" x="46" y="126"/>
-      <circ-port height="8" pin="360,330" width="8" x="46" y="156"/>
+      <circ-port height="8" pin="170,470" width="8" x="46" y="126"/>
+      <circ-port height="8" pin="170,620" width="8" x="46" y="156"/>
       <circ-port height="8" pin="170,250" width="8" x="46" y="186"/>
       <circ-port height="8" pin="170,400" width="8" x="46" y="216"/>
-      <circ-port height="8" pin="360,250" width="8" x="46" y="246"/>
-      <circ-port height="10" pin="360,400" width="10" x="145" y="165"/>
+      <circ-port height="8" pin="170,540" width="8" x="46" y="246"/>
+      <circ-port height="10" pin="170,690" width="10" x="145" y="165"/>
       <circ-anchor facing="east" height="6" width="6" x="147" y="167"/>
     </appear>
     <wire from="(580,370)" to="(890,370)"/>
@@ -205,11 +205,11 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(170,400)" to="(210,400)"/>
     <wire from="(170,250)" to="(210,250)"/>
     <wire from="(170,330)" to="(210,330)"/>
+    <wire from="(170,540)" to="(210,540)"/>
+    <wire from="(170,620)" to="(210,620)"/>
+    <wire from="(170,470)" to="(210,470)"/>
+    <wire from="(170,690)" to="(210,690)"/>
     <wire from="(700,190)" to="(700,340)"/>
-    <wire from="(360,250)" to="(400,250)"/>
-    <wire from="(360,330)" to="(400,330)"/>
-    <wire from="(360,180)" to="(400,180)"/>
-    <wire from="(360,400)" to="(400,400)"/>
     <wire from="(780,320)" to="(890,320)"/>
     <wire from="(740,330)" to="(890,330)"/>
     <wire from="(860,190)" to="(860,300)"/>
@@ -221,38 +221,75 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(820,310)" to="(890,310)"/>
     <wire from="(620,360)" to="(890,360)"/>
     <wire from="(580,190)" to="(580,370)"/>
-    <comp lib="0" loc="(360,330)" name="Pin">
+    <comp lib="0" loc="(170,400)" name="Pin">
       <a name="width" val="16"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(170,250)" name="Pin">
+    <comp lib="0" loc="(860,190)" name="Constant">
+      <a name="facing" val="south"/>
       <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(210,400)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="R6"/>
     </comp>
     <comp lib="0" loc="(780,190)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="width" val="16"/>
       <a name="label" val="R2"/>
     </comp>
-    <comp lib="0" loc="(700,190)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="width" val="16"/>
-      <a name="label" val="R4"/>
-    </comp>
-    <comp lib="0" loc="(620,190)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="width" val="16"/>
-      <a name="label" val="R6"/>
-    </comp>
-    <comp lib="0" loc="(970,340)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="ReadData"/>
-    </comp>
-    <comp lib="0" loc="(170,400)" name="Pin">
+    <comp lib="0" loc="(170,250)" name="Pin">
       <a name="width" val="16"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(360,180)" name="Pin">
+    <comp lib="0" loc="(170,100)" name="Tunnel">
+      <a name="width" val="3"/>
+      <a name="label" val="ReadReg"/>
+    </comp>
+    <comp lib="0" loc="(120,100)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(170,540)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(170,620)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(210,470)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="R3"/>
+    </comp>
+    <comp lib="0" loc="(170,180)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(820,190)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="16"/>
+      <a name="label" val="R1"/>
+    </comp>
+    <comp lib="0" loc="(210,620)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="R4"/>
+    </comp>
+    <comp lib="0" loc="(210,180)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="R1"/>
+    </comp>
+    <comp lib="0" loc="(170,330)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(580,190)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="16"/>
+      <a name="label" val="R7"/>
+    </comp>
+    <comp lib="0" loc="(170,470)" name="Pin">
       <a name="width" val="16"/>
       <a name="tristate" val="false"/>
     </comp>
@@ -260,93 +297,56 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="width" val="16"/>
       <a name="label" val="R5"/>
     </comp>
-    <comp lib="0" loc="(170,100)" name="Tunnel">
-      <a name="width" val="3"/>
-      <a name="label" val="ReadReg"/>
-    </comp>
-    <comp lib="0" loc="(820,190)" name="Tunnel">
+    <comp lib="0" loc="(700,190)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="width" val="16"/>
-      <a name="label" val="R1"/>
-    </comp>
-    <comp lib="0" loc="(210,330)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="R2"/>
-    </comp>
-    <comp lib="0" loc="(400,250)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="R7"/>
+      <a name="label" val="R4"/>
     </comp>
     <comp lib="2" loc="(930,340)" name="Multiplexer">
       <a name="selloc" val="tr"/>
       <a name="select" val="3"/>
       <a name="width" val="16"/>
     </comp>
-    <comp lib="0" loc="(120,100)" name="Pin">
-      <a name="width" val="3"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(400,400)" name="Tunnel">
+    <comp lib="0" loc="(210,690)" name="Tunnel">
       <a name="width" val="16"/>
       <a name="label" val="ReadData"/>
     </comp>
-    <comp lib="0" loc="(210,400)" name="Tunnel">
+    <comp lib="0" loc="(210,540)" name="Tunnel">
       <a name="width" val="16"/>
-      <a name="label" val="R6"/>
+      <a name="label" val="R7"/>
     </comp>
-    <comp lib="0" loc="(170,180)" name="Pin">
+    <comp lib="0" loc="(970,340)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="ReadData"/>
+    </comp>
+    <comp lib="0" loc="(170,690)" name="Pin">
+      <a name="output" val="true"/>
       <a name="width" val="16"/>
       <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(400,180)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="R3"/>
-    </comp>
-    <comp lib="0" loc="(400,330)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="R4"/>
     </comp>
     <comp lib="0" loc="(910,260)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="width" val="3"/>
       <a name="label" val="ReadReg"/>
     </comp>
-    <comp lib="0" loc="(860,190)" name="Constant">
+    <comp lib="0" loc="(620,190)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="width" val="16"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(580,190)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="width" val="16"/>
-      <a name="label" val="R7"/>
-    </comp>
-    <comp lib="0" loc="(360,250)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
+      <a name="label" val="R6"/>
     </comp>
     <comp lib="0" loc="(740,190)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="width" val="16"/>
       <a name="label" val="R3"/>
     </comp>
-    <comp lib="0" loc="(360,400)" name="Pin">
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(170,330)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(210,180)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="R1"/>
-    </comp>
     <comp lib="0" loc="(660,190)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="width" val="16"/>
       <a name="label" val="R5"/>
+    </comp>
+    <comp lib="0" loc="(210,330)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="R2"/>
     </comp>
   </circuit>
   <circuit name="RegFile">
@@ -356,14 +356,14 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabelfont" val="SansSerif plain 12"/>
     <appear>
       <rect fill="none" height="191" stroke="#000000" stroke-width="2" width="120" x="120" y="80"/>
-      <text font-family="SansSerif" font-size="10" text-anchor="middle" x="133" y="104">RA</text>
-      <text font-family="SansSerif" font-size="10" text-anchor="middle" x="133" y="144">RB</text>
-      <text font-family="SansSerif" font-size="10" text-anchor="middle" x="134" y="184">RW</text>
-      <text font-family="SansSerif" font-size="10" text-anchor="middle" x="222" y="254">CLK</text>
-      <text font-family="SansSerif" font-size="10" text-anchor="middle" x="219" y="134">BusA</text>
-      <text font-family="SansSerif" font-size="10" text-anchor="middle" x="220" y="184">BusB</text>
-      <text font-family="SansSerif" font-size="10" text-anchor="middle" x="143" y="244">BusW</text>
-      <text font-family="SansSerif" font-size="8" text-anchor="middle" x="160" y="72">RegWrite</text>
+      <text font-family="New York" font-size="8" text-anchor="middle" x="133" y="104">RA</text>
+      <text font-family="New York" font-size="8" text-anchor="middle" x="133" y="144">RB</text>
+      <text font-family="New York" font-size="8" text-anchor="middle" x="134" y="184">RW</text>
+      <text font-family="New York" font-size="8" text-anchor="middle" x="225" y="253">CLK</text>
+      <text font-family="New York" font-size="8" text-anchor="middle" x="221" y="134">BusA</text>
+      <text font-family="New York" font-size="8" text-anchor="middle" x="223" y="184">BusB</text>
+      <text font-family="New York" font-size="8" text-anchor="middle" x="138" y="244">BusW</text>
+      <text font-family="New York" font-size="8" text-anchor="middle" x="160" y="95">RegWrite</text>
       <text font-family="Unispace" font-size="18" font-weight="bold" text-anchor="middle" x="180" y="163">RegFile</text>
       <circ-port height="10" pin="100,30" width="10" x="235" y="125"/>
       <circ-port height="8" pin="50,200" width="8" x="116" y="96"/>
@@ -458,36 +458,29 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(630,200)" to="(710,200)"/>
     <wire from="(50,230)" to="(120,230)"/>
     <wire from="(1200,820)" to="(1220,820)"/>
-    <comp lib="0" loc="(630,110)" name="Tunnel">
-      <a name="facing" val="east"/>
+    <comp lib="0" loc="(830,180)" name="Tunnel">
       <a name="width" val="16"/>
-      <a name="label" val="R2"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(330,260)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="R7"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(160,130)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="BusW"/>
+      <a name="label" val="BusB"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
     <comp lib="0" loc="(860,900)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="S6"/>
     </comp>
-    <comp lib="0" loc="(650,880)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="CLK"/>
-      <a name="labelfont" val="SansSerif bold 8"/>
+    <comp lib="0" loc="(1170,760)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="BusW"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
-    <comp lib="0" loc="(310,880)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="CLK"/>
-      <a name="labelfont" val="SansSerif bold 8"/>
+    <comp lib="0" loc="(120,260)" name="Tunnel">
+      <a name="width" val="3"/>
+      <a name="label" val="RW"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(190,900)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="S2"/>
     </comp>
     <comp lib="0" loc="(510,830)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -495,77 +488,30 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="BusW"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
-    <comp lib="0" loc="(870,720)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="S5"/>
+    <comp lib="0" loc="(40,440)" name="Pin">
+      <a name="tristate" val="false"/>
     </comp>
-    <comp loc="(1340,760)" name="SubReg"/>
-    <comp lib="0" loc="(600,320)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="S2"/>
-    </comp>
-    <comp lib="0" loc="(1250,710)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="RegWrite"/>
-    </comp>
-    <comp lib="0" loc="(120,230)" name="Tunnel">
-      <a name="width" val="3"/>
-      <a name="label" val="RB"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(310,710)" name="Tunnel">
+    <comp lib="0" loc="(310,880)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="CLK"/>
       <a name="labelfont" val="SansSerif bold 8"/>
     </comp>
-    <comp lib="0" loc="(330,110)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="R2"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="2" loc="(730,510)" name="Decoder">
-      <a name="facing" val="west"/>
-      <a name="select" val="3"/>
-    </comp>
-    <comp lib="0" loc="(920,610)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="RegWrite"/>
-    </comp>
-    <comp lib="0" loc="(1050,660)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="R5"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(330,170)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="R4"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(590,780)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="RegWrite"/>
-    </comp>
-    <comp lib="0" loc="(330,200)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="R5"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(380,660)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="R1"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
+    <comp loc="(680,660)" name="SubReg"/>
     <comp lib="0" loc="(100,80)" name="Pin">
       <a name="output" val="true"/>
       <a name="width" val="16"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(1050,830)" name="Tunnel">
+    <comp lib="0" loc="(630,170)" name="Tunnel">
+      <a name="facing" val="east"/>
       <a name="width" val="16"/>
-      <a name="label" val="R6"/>
+      <a name="label" val="R4"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(440,50)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="3"/>
+      <a name="label" val="RA"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
     <comp lib="0" loc="(840,830)" name="Tunnel">
@@ -574,91 +520,36 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="BusW"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
-    <comp lib="0" loc="(120,200)" name="Tunnel">
-      <a name="width" val="3"/>
-      <a name="label" val="RA"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(630,140)" name="Tunnel">
-      <a name="facing" val="east"/>
+    <comp lib="0" loc="(1050,660)" name="Tunnel">
       <a name="width" val="16"/>
-      <a name="label" val="R3"/>
+      <a name="label" val="R5"/>
       <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(840,660)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="BusW"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(980,710)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="CLK"/>
-      <a name="labelfont" val="SansSerif bold 8"/>
     </comp>
     <comp lib="0" loc="(90,440)" name="Tunnel">
       <a name="label" val="CLK"/>
       <a name="labelfont" val="SansSerif bold 8"/>
     </comp>
-    <comp loc="(680,830)" name="SubReg"/>
-    <comp lib="0" loc="(400,320)" name="Tunnel">
+    <comp lib="0" loc="(40,350)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp loc="(340,830)" name="SubReg"/>
+    <comp lib="0" loc="(100,130)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="2" loc="(730,510)" name="Decoder">
+      <a name="facing" val="west"/>
+      <a name="select" val="3"/>
+    </comp>
+    <comp loc="(340,660)" name="SubReg"/>
+    <comp lib="0" loc="(720,660)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="R3"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(920,610)" name="Tunnel">
       <a name="facing" val="south"/>
-      <a name="label" val="S7"/>
-    </comp>
-    <comp lib="0" loc="(170,660)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="BusW"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(380,830)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="R2"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(330,230)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="R6"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(630,260)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="R7"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(650,710)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="CLK"/>
-      <a name="labelfont" val="SansSerif bold 8"/>
-    </comp>
-    <comp lib="0" loc="(980,880)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="CLK"/>
-      <a name="labelfont" val="SansSerif bold 8"/>
-    </comp>
-    <comp lib="0" loc="(730,550)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="width" val="3"/>
-      <a name="label" val="RW"/>
-    </comp>
-    <comp loc="(810,180)" name="RegSelector"/>
-    <comp lib="0" loc="(560,320)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="S3"/>
-    </comp>
-    <comp loc="(1010,660)" name="SubReg"/>
-    <comp lib="0" loc="(630,200)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="R5"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(1380,760)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="R7"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
+      <a name="label" val="RegWrite"/>
     </comp>
     <comp lib="0" loc="(330,80)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -666,7 +557,51 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="R1"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
-    <comp lib="0" loc="(630,230)" name="Tunnel">
+    <comp lib="0" loc="(330,110)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="R2"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(330,170)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="R4"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(520,320)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="S4"/>
+    </comp>
+    <comp lib="0" loc="(640,320)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="S1"/>
+    </comp>
+    <comp lib="0" loc="(120,200)" name="Tunnel">
+      <a name="width" val="3"/>
+      <a name="label" val="RA"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(870,720)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="S5"/>
+    </comp>
+    <comp lib="0" loc="(380,830)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="R2"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(1200,820)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="S7"/>
+    </comp>
+    <comp lib="0" loc="(630,80)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="R1"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(330,230)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="width" val="16"/>
       <a name="label" val="R6"/>
@@ -677,90 +612,83 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="BusA"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
-    <comp loc="(340,830)" name="SubReg"/>
-    <comp lib="0" loc="(40,440)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(520,320)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="S4"/>
-    </comp>
-    <comp lib="0" loc="(100,130)" name="Pin">
+    <comp lib="0" loc="(720,830)" name="Tunnel">
       <a name="width" val="16"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp loc="(510,180)" name="RegSelector"/>
-    <comp lib="0" loc="(330,140)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="R3"/>
+      <a name="label" val="R4"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
-    <comp loc="(340,660)" name="SubReg"/>
-    <comp lib="0" loc="(640,320)" name="Tunnel">
+    <comp lib="0" loc="(590,780)" name="Tunnel">
       <a name="facing" val="south"/>
-      <a name="label" val="S1"/>
+      <a name="label" val="RegWrite"/>
     </comp>
-    <comp lib="0" loc="(190,900)" name="Tunnel">
+    <comp loc="(1340,760)" name="SubReg"/>
+    <comp lib="0" loc="(440,320)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="S6"/>
+    </comp>
+    <comp lib="0" loc="(630,110)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="S2"/>
+      <a name="width" val="16"/>
+      <a name="label" val="R2"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(530,900)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="S4"/>
+    </comp>
+    <comp lib="0" loc="(840,660)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="BusW"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(160,130)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="BusW"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(560,320)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="S3"/>
+    </comp>
+    <comp lib="0" loc="(1380,760)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="R7"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(630,260)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="R7"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp loc="(810,180)" name="RegSelector"/>
+    <comp lib="0" loc="(50,200)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(920,780)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="label" val="RegWrite"/>
     </comp>
-    <comp lib="0" loc="(50,230)" name="Pin">
-      <a name="width" val="3"/>
-      <a name="tristate" val="false"/>
+    <comp lib="0" loc="(540,720)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="S3"/>
     </comp>
-    <comp lib="0" loc="(160,30)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="BusA"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(630,80)" name="Tunnel">
+    <comp lib="0" loc="(330,260)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="width" val="16"/>
-      <a name="label" val="R1"/>
+      <a name="label" val="R7"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
-    <comp lib="0" loc="(480,320)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="S5"/>
-    </comp>
-    <comp lib="0" loc="(830,180)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="BusB"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(250,610)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="RegWrite"/>
-    </comp>
-    <comp lib="0" loc="(40,350)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(590,610)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="RegWrite"/>
-    </comp>
-    <comp loc="(680,660)" name="SubReg"/>
-    <comp lib="0" loc="(1310,810)" name="Tunnel">
+    <comp lib="0" loc="(980,710)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="CLK"/>
       <a name="labelfont" val="SansSerif bold 8"/>
     </comp>
-    <comp lib="0" loc="(510,660)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="BusW"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(1170,760)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="BusW"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
+    <comp lib="0" loc="(400,320)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="S7"/>
     </comp>
     <comp lib="0" loc="(740,50)" name="Tunnel">
       <a name="facing" val="south"/>
@@ -768,64 +696,66 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="RB"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
-    <comp lib="0" loc="(90,350)" name="Tunnel">
-      <a name="label" val="RegWrite"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(540,720)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="S3"/>
-    </comp>
-    <comp lib="0" loc="(630,170)" name="Tunnel">
+    <comp lib="0" loc="(630,140)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="width" val="16"/>
-      <a name="label" val="R4"/>
+      <a name="label" val="R3"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
-    <comp lib="0" loc="(50,200)" name="Pin">
+    <comp lib="0" loc="(1310,810)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="CLK"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(170,660)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="BusW"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp loc="(510,180)" name="RegSelector"/>
+    <comp lib="0" loc="(590,610)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="RegWrite"/>
+    </comp>
+    <comp lib="0" loc="(650,880)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="CLK"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(250,610)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="RegWrite"/>
+    </comp>
+    <comp lib="0" loc="(630,230)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="R6"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(310,710)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="CLK"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(50,260)" name="Pin">
       <a name="width" val="3"/>
       <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(530,900)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="S4"/>
     </comp>
     <comp lib="0" loc="(100,30)" name="Pin">
       <a name="output" val="true"/>
       <a name="width" val="16"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(160,80)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="BusB"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp loc="(1010,830)" name="SubReg"/>
-    <comp lib="0" loc="(200,720)" name="Tunnel">
+    <comp lib="0" loc="(330,140)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="S1"/>
-    </comp>
-    <comp lib="0" loc="(720,660)" name="Tunnel">
       <a name="width" val="16"/>
       <a name="label" val="R3"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
-    <comp lib="0" loc="(440,320)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="S6"/>
-    </comp>
-    <comp lib="0" loc="(120,260)" name="Tunnel">
-      <a name="width" val="3"/>
-      <a name="label" val="RW"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(250,780)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="RegWrite"/>
-    </comp>
-    <comp lib="0" loc="(720,830)" name="Tunnel">
+    <comp lib="0" loc="(160,80)" name="Tunnel">
       <a name="width" val="16"/>
-      <a name="label" val="R4"/>
+      <a name="label" val="BusB"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
     <comp lib="0" loc="(170,830)" name="Tunnel">
@@ -834,19 +764,89 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="BusW"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
-    <comp lib="0" loc="(1200,820)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="S7"/>
+    <comp lib="0" loc="(980,880)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="CLK"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
     </comp>
-    <comp lib="0" loc="(50,260)" name="Pin">
+    <comp lib="0" loc="(200,720)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="S1"/>
+    </comp>
+    <comp lib="0" loc="(1250,710)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="RegWrite"/>
+    </comp>
+    <comp lib="0" loc="(650,710)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="CLK"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(160,30)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="BusA"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp loc="(1010,660)" name="SubReg"/>
+    <comp lib="0" loc="(330,200)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="R5"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(250,780)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="RegWrite"/>
+    </comp>
+    <comp lib="0" loc="(1050,830)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="R6"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(50,230)" name="Pin">
       <a name="width" val="3"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(440,50)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="width" val="3"/>
-      <a name="label" val="RA"/>
+    <comp lib="0" loc="(630,200)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="R5"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
+    <comp lib="0" loc="(480,320)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="S5"/>
+    </comp>
+    <comp lib="0" loc="(120,230)" name="Tunnel">
+      <a name="width" val="3"/>
+      <a name="label" val="RB"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(90,350)" name="Tunnel">
+      <a name="label" val="RegWrite"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(730,550)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="3"/>
+      <a name="label" val="RW"/>
+    </comp>
+    <comp loc="(1010,830)" name="SubReg"/>
+    <comp lib="0" loc="(380,660)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="R1"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(510,660)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="BusW"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(600,320)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="S2"/>
+    </comp>
+    <comp loc="(680,830)" name="SubReg"/>
   </circuit>
 </project>
