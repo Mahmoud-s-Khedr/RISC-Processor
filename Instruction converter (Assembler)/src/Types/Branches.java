@@ -29,6 +29,7 @@ public class Branches {
                 op = opCode.valueOf(str).op;
                 machineCode.append(BinaryOp.binaryConverter(op, 5));
                 String label = arr[2].trim();
+                
                 int targetIndex = -1;
                 for (int j = 0; j < lines.length; j++) {
                     if (lines[j].trim().startsWith(label + ":")) {
