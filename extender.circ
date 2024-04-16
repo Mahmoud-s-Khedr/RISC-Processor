@@ -54,12 +54,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <appear>
-      <text font-family="New York" font-size="8" text-anchor="middle" x="131" y="183">ex. ctrl</text>
-      <text font-family="New York" font-size="8" text-anchor="middle" x="111" y="203">in</text>
-      <text font-family="New York" font-size="8" text-anchor="middle" x="206" y="204">out</text>
-      <rect fill="none" height="61" stroke="#050503" stroke-width="2" width="120" x="100" y="170"/>
-      <text font-family="Unispace" font-size="12" text-anchor="middle" x="160" y="220">5 &gt;&gt;&gt; 16</text>
-      <text font-family="Unispace" font-size="12" text-anchor="middle" x="161" y="198">Extender</text>
+      <rect fill="#ffe3fa" height="61" stroke="#050503" stroke-width="2" width="120" x="100" y="170"/>
+      <text font-family="Unispace" font-size="12" text-anchor="middle" x="160" y="219">5 &gt;&gt;&gt; 16</text>
+      <text font-family="New York" font-size="8" text-anchor="middle" x="131" y="182">ex. ctrl</text>
+      <text font-family="New York" font-size="8" text-anchor="middle" x="206" y="203">out</text>
+      <text font-family="New York" font-size="8" text-anchor="middle" x="111" y="202">in</text>
+      <text font-family="Unispace" font-size="12" text-anchor="middle" x="161" y="197">Extender</text>
       <circ-port height="8" pin="50,50" width="8" x="126" y="166"/>
       <circ-port height="8" pin="80,170" width="8" x="96" y="196"/>
       <circ-port height="10" pin="140,300" width="10" x="215" y="195"/>
@@ -78,40 +78,16 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(540,240)" to="(540,260)"/>
     <wire from="(300,240)" to="(370,240)"/>
     <wire from="(300,320)" to="(370,320)"/>
-    <comp lib="0" loc="(300,320)" name="Tunnel">
-      <a name="facing" val="east"/>
+    <comp lib="0" loc="(110,170)" name="Tunnel">
       <a name="width" val="5"/>
       <a name="label" val="input"/>
     </comp>
     <comp lib="0" loc="(410,240)" name="Bit Extender">
       <a name="in_width" val="5"/>
     </comp>
-    <comp lib="0" loc="(610,280)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="extended number"/>
-    </comp>
-    <comp lib="0" loc="(80,50)" name="Tunnel">
-      <a name="label" val="extend control"/>
-    </comp>
-    <comp lib="0" loc="(110,170)" name="Tunnel">
-      <a name="width" val="5"/>
-      <a name="label" val="input"/>
-    </comp>
-    <comp lib="0" loc="(300,240)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="5"/>
-      <a name="label" val="input"/>
-    </comp>
-    <comp lib="0" loc="(50,50)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
     <comp lib="0" loc="(410,320)" name="Bit Extender">
       <a name="in_width" val="5"/>
       <a name="type" val="sign"/>
-    </comp>
-    <comp lib="0" loc="(80,170)" name="Pin">
-      <a name="width" val="5"/>
-      <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(140,300)" name="Pin">
       <a name="facing" val="west"/>
@@ -119,19 +95,43 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="width" val="16"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(130,300)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="extended number"/>
+    <comp lib="0" loc="(80,50)" name="Tunnel">
+      <a name="label" val="extend control"/>
+    </comp>
+    <comp lib="0" loc="(80,170)" name="Pin">
+      <a name="width" val="5"/>
+      <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(540,240)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="label" val="extend control"/>
     </comp>
+    <comp lib="0" loc="(50,50)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(130,300)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="extended number"/>
+    </comp>
+    <comp lib="0" loc="(610,280)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="extended number"/>
+    </comp>
+    <comp lib="0" loc="(300,240)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="5"/>
+      <a name="label" val="input"/>
+    </comp>
     <comp lib="2" loc="(560,280)" name="Multiplexer">
       <a name="selloc" val="tr"/>
       <a name="width" val="16"/>
       <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(300,320)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="5"/>
+      <a name="label" val="input"/>
     </comp>
   </circuit>
 </project>
