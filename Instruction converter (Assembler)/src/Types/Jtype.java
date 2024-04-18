@@ -1,6 +1,9 @@
 package Types;
 
 import BinaryOperations.BinaryOp;
+
+import java.util.List;
+
 public class Jtype {
     public enum opCode {
         j(30),
@@ -12,12 +15,9 @@ public class Jtype {
         }
     }
 
-    public static String execute(String instructions, int index) {
-        String[] lines = String.valueOf(instructions).split("\\r?\\n"); // Split input into lines
+    public static String execute(List <String> instructions, int index) {
         StringBuilder machineCode = new StringBuilder();
-
-            String instruction = lines[index];
-            instruction = instruction.toLowerCase().trim();
+            String instruction = instructions.get(index);
             int op = 0;
             String[] parts = instruction.split(" ");
                 String str = parts[0];
@@ -25,8 +25,8 @@ public class Jtype {
                 machineCode.append(BinaryOp.binaryConverter(op, 5));
                 String label = parts[1];
                 int targetIndex = -1;
-                for (int j = 0; j < lines.length; j++) {
-                    String x = lines[j].trim();
+                for (int j = 0; j < instructions.size(); j++) {
+                    String x = instructions.get(j);
                     if (x.startsWith(label + ":")) {
                         targetIndex = j;
                         break;

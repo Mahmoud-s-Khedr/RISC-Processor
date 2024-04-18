@@ -6,10 +6,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class ExtractingData {
 
-    public static void extract ( StringBuilder instructions, StringBuilder machineCodeTotal, StringBuilder machineCodeTotalHEXA){
+    public static void extract (List<String> instructions, StringBuilder machineCodeTotal, StringBuilder machineCodeTotalHEXA){
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
         String folderName = dateFormat.format(new Date());
         File folder = new File(folderName);

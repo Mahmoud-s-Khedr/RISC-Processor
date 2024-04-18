@@ -22,10 +22,10 @@ public class Load_And_Store {
         String str = parts[0];
         op = opCode.valueOf(str).op;
 
-        String[] arr1 = instruction.substring(parts[0].length(), instruction.length()).split(",");
+        String[] arr1 = parts[1].split(",");
         rd = arr1[0].trim().charAt(1) - 48;
 
-        String[] arr2 = instruction.substring(arr1[1].length() - 1, instruction.length()).split("\\(");
+        String[] arr2 = arr1[1].split("\\(");
         rs = arr2[1].charAt(1) - 48;
         imm = Integer.parseInt(arr2[0].replaceAll("[^0-9]", ""));
         machineCode.append(BinaryOp.binaryConverter(op, 5));

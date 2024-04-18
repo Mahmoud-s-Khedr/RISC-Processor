@@ -2,30 +2,21 @@ package Managing_Instructions;
 import BinaryOperations.BinaryOp;
 import ExtractData.ExtractingData;
 import Types.*;
+
+import java.util.List;
 import java.util.Scanner;
 
 public class instructionsRedirect {
     static boolean isBranch = false;
     static boolean isJump = false;
     static int counter = 0;
-    public static StringBuilder instructions = new StringBuilder();
-
     public static StringBuilder machineCodeTotal = new StringBuilder();
     public static StringBuilder machineCodeTotalHEXA = new StringBuilder();
 
-    public static void setInstructions(String string) {
-        instructions = new StringBuilder(string);
-    }
-
-
-    public static void divideInstructions () {
-        instructions = new StringBuilder(String.valueOf(instructions).toLowerCase());
-        String[] lines = String.valueOf(instructions).split("\\r?\\n"); // Split input into lines
+    public static void divideInstructions (List<String> arr_Instructions) {
         String machineCode = null;
         String machineCodeHEXA = null;
-
-        for (String line : lines) {
-            line = line.toLowerCase();
+        for (String line : arr_Instructions) {
             String[] arr = line.split(":");
             if (arr.length == 1) {
                 machineCode = redirect(line); // Assuming execute() returns machine code
@@ -33,11 +24,11 @@ public class instructionsRedirect {
                 machineCode = redirect(arr[1]);
             }
             if (isJump) {
-                machineCode = Jtype.execute(String.valueOf(instructions), counter);
+                machineCode = Jtype.execute(arr_Instructions, counter);
                 isJump = false;
             }
             if (isBranch) {
-                machineCode = Branches.execute(String.valueOf(instructions), counter);
+                machineCode = Branches.execute(arr_Instructions, counter);
                 isBranch = false;
             }
             machineCodeHEXA = BinaryOp.binaryToHexadecimal(machineCode);
@@ -55,7 +46,7 @@ public class instructionsRedirect {
 
 
 
-        ExtractingData.extract(instructions, machineCodeTotal, machineCodeTotalHEXA);
+        ExtractingData.extract(arr_Instructions, machineCodeTotal, machineCodeTotalHEXA);
     }
 
     public static String redirect (String instruction) {

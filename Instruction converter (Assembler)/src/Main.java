@@ -5,7 +5,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import Managing_Instructions.instructionsRedirect;
+import Managing_Instructions.Deal_With_Input;
 
 public class Main {
     public static void main(String[] args) {
@@ -37,13 +37,12 @@ public class Main {
         translateButton.addActionListener(e -> {
             try {
                 String instructions = textArea.getText();
-                instructionsRedirect.setInstructions(instructions);
-                instructionsRedirect.divideInstructions(); // Process the instructions
-
-                StringBuilder hexCode = instructionsRedirect.getMachineCodeTotalHEXA();
-                hexTextArea.setText(hexCode.toString()); // Display the hexadecimal code
+                // Pass the instructions to another class for processing
+                Deal_With_Input processor = new Deal_With_Input(instructions);
+                String processedInstructions = Deal_With_Input.convert();
+                hexTextArea.setText(processedInstructions); // Display the processed instructions
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(null, "Error converting instructions to hexadecimal: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Error converting instructions: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
             }
         });
 
@@ -92,6 +91,7 @@ public class Main {
             }
         });
 
+
         // Panel for the buttons
         JPanel buttonPanel = new JPanel();
         buttonPanel.add(translateButton);
@@ -103,7 +103,7 @@ public class Main {
         JSplitPane splitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, inputScrollPane, hexScrollPane);
         splitPane.setResizeWeight(0.5); // Equal split between the two components
 
-        // Panel for the label and the split pane
+        // Panel for the label and the split paness
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
         mainPanel.add(inputLabelPanel);
@@ -113,7 +113,7 @@ public class Main {
         mainPanel.add(buttonPanel);
 
         // Create and set up the frame
-        JFrame frame = new JFrame("MIPS Assembly to Hexadecimal Converter");
+        JFrame frame = new JFrame("MIPS Assembly Instruction Processor");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(mainPanel);
         frame.pack();

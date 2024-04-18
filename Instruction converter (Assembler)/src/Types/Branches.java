@@ -1,6 +1,9 @@
 package Types;
 
 import BinaryOperations.BinaryOp;
+
+import java.util.List;
+
 public class Branches {
     public enum opCode {
         beq(14),
@@ -12,8 +15,7 @@ public class Branches {
             this.op = op;
         }
     }
-    public static String execute(String instructions, int index) {
-        String[] lines = String.valueOf(instructions).split("\\r?\\n"); // Split input into lines
+    public static String execute(List <String> instructions, int index) {
         StringBuilder machineCode = new StringBuilder();
         String instruction;
         String[] parts = null;
@@ -21,18 +23,18 @@ public class Branches {
         int rs = 0;
         int rd = 0;
 
-            instruction = lines[index].trim();
+            instruction = instructions.get(index);
             int op = 0;
                 parts = instruction.split(" ");
-                arr = instruction.substring(parts[0].length(), instruction.length()).split(",");
                 String str = parts[0];
                 op = opCode.valueOf(str).op;
                 machineCode.append(BinaryOp.binaryConverter(op, 5));
-                String label = arr[2].trim();
+                arr = parts[1].split(",");
+                String label = arr[2];
                 
                 int targetIndex = -1;
-                for (int j = 0; j < lines.length; j++) {
-                    if (lines[j].trim().startsWith(label + ":")) {
+                for (int j = 0; j < instructions.size(); j++) {
+                    if (instructions.get(j).startsWith(label + ":")) {
                         targetIndex = j;
                         break;
                     }
