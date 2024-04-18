@@ -13,7 +13,7 @@ public class ExtractingData {
     public static void extract (List<String> instructions, StringBuilder machineCodeTotal, StringBuilder machineCodeTotalHEXA){
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
         String folderName = dateFormat.format(new Date());
-        File folder = new File(folderName);
+        File folder = new File("./Logs/" + folderName);
         if (!folder.exists()) {
             folder.mkdir();
         }
