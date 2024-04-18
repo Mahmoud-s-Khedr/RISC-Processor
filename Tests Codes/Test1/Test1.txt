@@ -16,7 +16,7 @@ jal init_array		# initialize arrB
 
 addi r4, r0, 3		# x value
 
-lui 869
+lui 1619
 ori r3, r1, 9
 
 addi r5, r4, 2
