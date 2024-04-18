@@ -18,8 +18,9 @@ public class Jtype {
     public static String execute(List <String> instructions, int index) {
         StringBuilder machineCode = new StringBuilder();
             String instruction = instructions.get(index);
+            String[] arr = instruction.split(":");
             int op = 0;
-            String[] parts = instruction.split(" ");
+            String[] parts = arr[arr.length - 1].split(" ");
                 String str = parts[0];
                 op = opCode.valueOf(str).op;
                 machineCode.append(BinaryOp.binaryConverter(op, 5));
