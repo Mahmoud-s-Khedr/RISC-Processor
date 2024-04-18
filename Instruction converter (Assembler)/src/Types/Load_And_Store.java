@@ -27,7 +27,7 @@ public class Load_And_Store {
 
         String[] arr2 = arr1[1].split("\\(");
         rs = arr2[1].charAt(1) - 48;
-        imm = Integer.parseInt(arr2[0].replaceAll("[^0-9]", ""));
+        imm = Integer.parseInt(arr2[0]);
         machineCode.append(BinaryOp.binaryConverter(op, 5));
         String stringConverted = BinaryOp.binaryConverterSigned(imm, 5);
         if (stringConverted.equals(""))
