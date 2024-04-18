@@ -1,8 +1,0 @@
-# $1 address, $2 element, $3 sum
-addi $3, $0, 0
-loop:lw $2, 0($1)
-beq $2, $0, exit
-add $3, $3, $2
-addi $1, $1, 1
-j loop
-exit: j exit
