@@ -1,0 +1,13 @@
+addi r1, r0, 0		# a
+addi r2, r0, 7		# b
+addi r3, r0, 10
+
+loop:
+	bge r1, r3, exit
+	add r4, r1, r2
+	sw r4, 0(r1)
+	addi r1, r1, 1
+	j loop
+
+exit:
+	j exit
