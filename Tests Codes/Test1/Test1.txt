@@ -1,0 +1,43 @@
+main:
+addi r1, r0, 1		# arrA address
+addi r2, r0, 11		# arrB address
+
+addi r3, r0, 8
+sw r3, -1(r1)		# arrA len
+
+addi r3, r3, -1
+sw r3, -1(r2)		# arrB len
+	
+add r5, r0, r1
+jal init_array		# initialize arrA
+	
+add r5, r0, r2
+jal init_array		# initialize arrB
+
+addi r4, r0, 3		# x value
+
+lui 869
+ori r3, r1, 9
+
+addi r5, r4, 2
+add r5, r5, r2
+lw r5, 0(r5)		# r5 = B[x+2]
+	
+	
+or r5, r5, r3
+
+addi r6, r4, 3
+add r6, r6, r1
+sw r5, 0(r6)		# A[x+3] = r5
+j exit
+	
+init_array:
+add r3, r0, r0 		# initialize counter
+lw r4, -1(r5) 		# load array size
+init_loop:
+sw r3, 0(r5) 		# store array element
+addi r3, r3, 1 		# increment counter
+addi r5, r5, 1		# increment address
+blt r3, r4, init_loop 	# loop if not reached array size
+jr r7
+exit: j exit
