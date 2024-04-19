@@ -5,13 +5,13 @@
 # The output is stored in $5
 
 
-
-addi $1, $0, 5 # inputs
+# inputs
+addi $1, $0, 5 
 addi $2, $0, 6
 
 
-
 addi $3, $0, 0
+# Loop over length - 1
 addi $2, $2, -1
 
 product_loop:
@@ -33,16 +33,21 @@ exit: j exit
 
 mul:
 
+# Set the stack pointer at the last position in the memory
 addi $6, $0, -1
-sw $4, 0($6) # Save Preserved values
+
+# Save Preserved values
+sw $4, 0($6) 
 sw $3, -1($6)
 sw $2, -2($6)
 
-lw $4, 0($5) # Load inputs
+# Load inputs
+lw $4, 0($5) 
 lw $3, 1($5)
 
 addi $2, $0, 0
 addi $5, $0, 0
+
 loop:
 beq $2, $4, return
 add $5, $5, $3
@@ -51,7 +56,8 @@ j loop
 
 return:
 
-lw $4, 0($6) # Load Preserved values
+# Load Preserved value
+lw $4, 0($6) s
 lw $3, -1($6)
 lw $2, -2($6)
 
