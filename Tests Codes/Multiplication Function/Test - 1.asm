@@ -41,8 +41,8 @@ j loop
 
 return:
 
-# Load Preserved value
-lw $4, 0($6) s
+# Load Preserved values
+lw $4, 0($6)
 lw $3, -1($6)
 lw $2, -2($6)
 

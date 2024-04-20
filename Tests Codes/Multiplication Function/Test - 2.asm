@@ -1,35 +1,27 @@
-# Calculate the Poduct of an array
-# Inputs:
-# $1 copntains the address of the first element
-# $2 contains the length
+# Power Function
+# Calculate 0($0) to the power of 1($0)
 # The output is stored in $5
 
 
-# inputs
-addi $1, $0, 5 
-addi $2, $0, 6
+# Load the inputs
+lw $1, 0($0)
+lw $2, 1($0)
+
+# Store the defult result (1)
+addi $3, $0, 1
+sw $3, 1($0)
 
 
-addi $3, $0, 0
-# Loop over length - 1
-addi $2, $2, -1
-
-product_loop:
-beq $3, $2, exit
-
-add $4, $1, $3
-
-addi $5, $4, 0
+addi $4, $0, 0
+power_loop:
+beq $4, $2, exit
+addi $5, $0, 0
 jal mul
-
-sw $5, 1($4)
-addi $3, $3, 1
-
-j product_loop
+sw $5, 1($0)
+addi $4, $4, 1
+j power_loop
 
 exit: j exit
-
-
 
 mul:
 
@@ -56,8 +48,8 @@ j loop
 
 return:
 
-# Load Preserved value
-lw $4, 0($6) s
+# Load Preserved values
+lw $4, 0($6)
 lw $3, -1($6)
 lw $2, -2($6)
 
