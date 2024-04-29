@@ -14,8 +14,8 @@ Beq R0, R0, L2
 L1: Sw R4, 0(R0) #mem[0] <- reg[4]
 Jal func 
 Sll R3, R2, 6
-l4:ROR R6, R3, 3
-beq r0,r0,l4 #program is over, keep looping back to here
+ROR R6, R3, 3
+l4: beq r0,r0,l4 #program is over, keep looping back to here
 func: or R5, R2, R3
 Lw R1, 0(R0)
 Lw R2, 5(R1)
