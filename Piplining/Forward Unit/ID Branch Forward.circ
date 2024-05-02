@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.7.1" version="1.0">
+This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+<lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+      <a name="appear" val="legacy"/>
+    </tool>
+    <tool name="Tunnel">
+      <a name="label" val="ForwardC"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4"/>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#Base" name="6">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="ID Branch Forward"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="6" map="Button2" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="6" name="Poke Tool"/>
+    <tool lib="6" name="Edit Tool"/>
+    <tool lib="6" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate">
+      <a name="size" val="30"/>
+    </tool>
+  </toolbar>
+  <circuit name="ID Branch Forward">
+    <a name="circuit" val="ID Branch Forward"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <rect fill="#c8f9ff" height="170" stroke="#000000" stroke-width="2" width="110" x="130" y="111"/>
+      <text font-family="SansSerif" font-size="12" font-weight="bold" text-anchor="middle" x="194" y="189">ID Branch</text>
+      <text font-family="SansSerif" font-size="12" font-weight="bold" text-anchor="middle" x="194" y="201">Forward Unit</text>
+      <text font-family="SansSerif" font-size="9" text-anchor="middle" x="141" y="134">Rd</text>
+      <text font-family="SansSerif" font-size="9" text-anchor="middle" x="140" y="164">Rs</text>
+      <text font-family="SansSerif" font-size="9" text-anchor="middle" x="140" y="194">Rt</text>
+      <text font-family="SansSerif" font-size="9" text-anchor="middle" x="150" y="264">Branch</text>
+      <text font-family="SansSerif" font-size="9" text-anchor="middle" x="213" y="163">ForwardC</text>
+      <text font-family="SansSerif" font-size="9" text-anchor="middle" x="213" y="233">ForwardD</text>
+      <circ-port height="8" pin="90,50" width="8" x="126" y="256"/>
+      <circ-port height="8" pin="100,110" width="8" x="126" y="126"/>
+      <circ-port height="8" pin="100,170" width="8" x="126" y="156"/>
+      <circ-port height="8" pin="100,230" width="8" x="126" y="186"/>
+      <circ-port height="10" pin="970,90" width="10" x="235" y="155"/>
+      <circ-port height="10" pin="970,180" width="10" x="235" y="225"/>
+      <circ-anchor facing="east" height="6" width="6" x="177" y="127"/>
+    </appear>
+    <wire from="(280,400)" to="(340,400)"/>
+    <wire from="(520,420)" to="(640,420)"/>
+    <wire from="(920,180)" to="(970,180)"/>
+    <wire from="(920,90)" to="(970,90)"/>
+    <wire from="(470,60)" to="(520,60)"/>
+    <wire from="(470,50)" to="(520,50)"/>
+    <wire from="(470,70)" to="(520,70)"/>
+    <wire from="(110,420)" to="(230,420)"/>
+    <wire from="(690,400)" to="(750,400)"/>
+    <wire from="(600,380)" to="(640,380)"/>
+    <wire from="(100,110)" to="(140,110)"/>
+    <wire from="(100,170)" to="(140,170)"/>
+    <wire from="(100,230)" to="(140,230)"/>
+    <wire from="(190,380)" to="(230,380)"/>
+    <wire from="(420,60)" to="(450,60)"/>
+    <wire from="(140,400)" to="(230,400)"/>
+    <wire from="(550,400)" to="(640,400)"/>
+    <wire from="(550,60)" to="(620,60)"/>
+    <wire from="(410,250)" to="(490,250)"/>
+    <wire from="(410,160)" to="(490,160)"/>
+    <wire from="(530,240)" to="(610,240)"/>
+    <wire from="(530,150)" to="(610,150)"/>
+    <wire from="(90,50)" to="(160,50)"/>
+    <wire from="(420,140)" to="(490,140)"/>
+    <wire from="(420,230)" to="(490,230)"/>
+    <comp lib="0" loc="(520,420)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Rd==Rt"/>
+    </comp>
+    <comp lib="0" loc="(420,140)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="3"/>
+      <a name="label" val="EX/MEM Rd"/>
+    </comp>
+    <comp lib="0" loc="(410,160)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="3"/>
+      <a name="label" val="IF/ID Rs"/>
+    </comp>
+    <comp lib="0" loc="(620,60)" name="Tunnel">
+      <a name="label" val="!R0"/>
+    </comp>
+    <comp lib="1" loc="(550,60)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="0" loc="(160,50)" name="Tunnel">
+      <a name="label" val="Branch"/>
+    </comp>
+    <comp lib="0" loc="(970,180)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(140,110)" name="Tunnel">
+      <a name="width" val="3"/>
+      <a name="label" val="EX/MEM Rd"/>
+    </comp>
+    <comp lib="0" loc="(450,60)" name="Splitter">
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+      <a name="appear" val="legacy"/>
+    </comp>
+    <comp lib="0" loc="(140,400)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="!R0"/>
+    </comp>
+    <comp lib="0" loc="(750,400)" name="Tunnel">
+      <a name="label" val="ForwardD"/>
+    </comp>
+    <comp lib="0" loc="(550,400)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="!R0"/>
+    </comp>
+    <comp lib="0" loc="(100,230)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(140,230)" name="Tunnel">
+      <a name="width" val="3"/>
+      <a name="label" val="IF/ID Rt"/>
+    </comp>
+    <comp lib="0" loc="(610,150)" name="Tunnel">
+      <a name="label" val="Rd==Rs"/>
+    </comp>
+    <comp lib="0" loc="(140,170)" name="Tunnel">
+      <a name="width" val="3"/>
+      <a name="label" val="IF/ID Rs"/>
+    </comp>
+    <comp lib="0" loc="(920,90)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="ForwardC"/>
+    </comp>
+    <comp lib="0" loc="(610,240)" name="Tunnel">
+      <a name="label" val="Rd==Rt"/>
+    </comp>
+    <comp lib="3" loc="(530,150)" name="Comparator">
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(100,170)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(420,230)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="3"/>
+      <a name="label" val="EX/MEM Rd"/>
+    </comp>
+    <comp lib="0" loc="(100,110)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(280,400)" name="AND Gate">
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="3" loc="(530,240)" name="Comparator">
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(110,420)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Rd==Rs"/>
+    </comp>
+    <comp lib="1" loc="(690,400)" name="AND Gate">
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="0" loc="(90,50)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(190,380)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Branch"/>
+    </comp>
+    <comp lib="0" loc="(420,60)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="3"/>
+      <a name="label" val="EX/MEM Rd"/>
+    </comp>
+    <comp lib="0" loc="(410,250)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="3"/>
+      <a name="label" val="IF/ID Rt"/>
+    </comp>
+    <comp lib="0" loc="(340,400)" name="Tunnel">
+      <a name="label" val="ForwardC"/>
+    </comp>
+    <comp lib="0" loc="(600,380)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Branch"/>
+    </comp>
+    <comp lib="0" loc="(920,180)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="ForwardD"/>
+    </comp>
+    <comp lib="0" loc="(970,90)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+</project>
