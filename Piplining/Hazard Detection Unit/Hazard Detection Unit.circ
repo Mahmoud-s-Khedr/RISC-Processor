@@ -70,7 +70,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </tool>
-    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </tool>
     <tool lib="1" name="AND Gate"/>
     <tool lib="1" name="OR Gate"/>
   </toolbar>
@@ -81,125 +83,48 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabelfont" val="SansSerif plain 12"/>
     <appear>
       <rect fill="#fbffe1" height="80" stroke="#000000" stroke-width="2" width="170" x="110" y="80"/>
-      <text font-family="New York" font-size="7" text-anchor="middle" x="194" y="153">Mem Read Ex</text>
-      <text font-family="New York" font-size="7" text-anchor="middle" x="265" y="126">Stall</text>
-      <text font-family="New York" font-size="7" text-anchor="middle" x="125" y="144">Rt Id</text>
-      <text font-family="New York" font-size="7" text-anchor="middle" x="190" y="93">Rt Ex</text>
+      <text font-family="New York" font-size="7" text-anchor="middle" x="254" y="156">Mem Read Ex</text>
+      <text font-family="New York" font-size="7" text-anchor="middle" x="270" y="122">Stall</text>
+      <text font-family="New York" font-size="7" text-anchor="middle" x="121" y="143">Rt Id</text>
+      <text font-family="New York" font-size="7" text-anchor="middle" x="191" y="89">Rt Ex</text>
       <text font-family="Unispace" font-size="12" text-anchor="middle" x="193" y="126">Hazard Detection</text>
-      <text font-family="New York" font-size="7" text-anchor="middle" x="126" y="104">Rs Id</text>
+      <text font-family="New York" font-size="7" text-anchor="middle" x="121" y="103">Rs Id</text>
+      <text font-family="New York" font-size="7" text-anchor="middle" x="135" y="157">Mem Read Id</text>
       <circ-port height="8" pin="80,80" width="8" x="106" y="96"/>
       <circ-port height="8" pin="80,120" width="8" x="106" y="136"/>
       <circ-port height="8" pin="80,170" width="8" x="186" y="76"/>
-      <circ-port height="8" pin="70,230" width="8" x="196" y="156"/>
+      <circ-port height="8" pin="70,230" width="8" x="256" y="156"/>
       <circ-port height="10" pin="140,370" width="10" x="275" y="115"/>
+      <circ-port height="8" pin="70,270" width="8" x="126" y="156"/>
       <circ-anchor facing="east" height="6" width="6" x="277" y="117"/>
     </appear>
+    <wire from="(410,380)" to="(470,380)"/>
+    <wire from="(80,370)" to="(140,370)"/>
+    <wire from="(470,110)" to="(520,110)"/>
+    <wire from="(370,320)" to="(370,340)"/>
+    <wire from="(410,380)" to="(410,400)"/>
+    <wire from="(410,580)" to="(410,660)"/>
+    <wire from="(390,450)" to="(390,530)"/>
+    <wire from="(410,70)" to="(410,100)"/>
+    <wire from="(410,180)" to="(410,210)"/>
+    <wire from="(430,500)" to="(430,530)"/>
+    <wire from="(430,710)" to="(430,740)"/>
+    <wire from="(70,230)" to="(110,230)"/>
+    <wire from="(70,270)" to="(110,270)"/>
+    <wire from="(370,370)" to="(370,400)"/>
+    <wire from="(430,500)" to="(470,500)"/>
     <wire from="(80,120)" to="(110,120)"/>
     <wire from="(80,80)" to="(110,80)"/>
     <wire from="(80,170)" to="(110,170)"/>
-    <wire from="(80,370)" to="(140,370)"/>
-    <wire from="(470,110)" to="(520,110)"/>
-    <wire from="(470,220)" to="(520,220)"/>
     <wire from="(410,100)" to="(430,100)"/>
     <wire from="(410,210)" to="(430,210)"/>
-    <wire from="(440,450)" to="(460,450)"/>
-    <wire from="(440,450)" to="(440,500)"/>
-    <wire from="(380,310)" to="(460,310)"/>
-    <wire from="(400,420)" to="(400,500)"/>
+    <wire from="(450,610)" to="(470,610)"/>
+    <wire from="(470,220)" to="(610,220)"/>
+    <wire from="(450,610)" to="(450,660)"/>
     <wire from="(360,70)" to="(360,120)"/>
     <wire from="(360,180)" to="(360,230)"/>
-    <wire from="(410,70)" to="(410,100)"/>
-    <wire from="(410,180)" to="(410,210)"/>
-    <wire from="(420,340)" to="(420,370)"/>
-    <wire from="(420,550)" to="(420,580)"/>
-    <wire from="(70,230)" to="(110,230)"/>
-    <wire from="(380,310)" to="(380,370)"/>
-    <wire from="(420,340)" to="(460,340)"/>
     <wire from="(360,120)" to="(430,120)"/>
     <wire from="(360,230)" to="(430,230)"/>
-    <comp lib="0" loc="(140,370)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="3" loc="(470,220)" name="Comparator">
-      <a name="width" val="3"/>
-    </comp>
-    <comp lib="0" loc="(520,220)" name="Tunnel">
-      <a name="label" val="Rt == Rt (Ex)"/>
-    </comp>
-    <comp lib="0" loc="(110,170)" name="Tunnel">
-      <a name="width" val="3"/>
-      <a name="label" val="Rt Ex"/>
-    </comp>
-    <comp lib="1" loc="(420,550)" name="AND Gate">
-      <a name="facing" val="south"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(520,110)" name="Tunnel">
-      <a name="label" val="Rs == Rt (Ex)"/>
-    </comp>
-    <comp lib="0" loc="(460,340)" name="Tunnel">
-      <a name="label" val="Rs == Rt (Ex)"/>
-    </comp>
-    <comp lib="0" loc="(110,80)" name="Tunnel">
-      <a name="width" val="3"/>
-      <a name="label" val="Rs Id"/>
-    </comp>
-    <comp lib="3" loc="(470,110)" name="Comparator">
-      <a name="width" val="3"/>
-    </comp>
-    <comp lib="0" loc="(460,450)" name="Tunnel">
-      <a name="label" val="Mem Read Ex"/>
-    </comp>
-    <comp lib="0" loc="(460,310)" name="Tunnel">
-      <a name="label" val="Rt == Rt (Ex)"/>
-    </comp>
-    <comp lib="1" loc="(400,420)" name="OR Gate">
-      <a name="facing" val="south"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(80,80)" name="Pin">
-      <a name="width" val="3"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(110,120)" name="Tunnel">
-      <a name="width" val="3"/>
-      <a name="label" val="Rt Id"/>
-    </comp>
-    <comp lib="0" loc="(420,580)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="stall"/>
-    </comp>
-    <comp lib="0" loc="(360,180)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="width" val="3"/>
-      <a name="label" val="Rt Ex"/>
-    </comp>
-    <comp lib="0" loc="(80,120)" name="Pin">
-      <a name="width" val="3"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(110,230)" name="Tunnel">
-      <a name="label" val="Mem Read Ex"/>
-    </comp>
-    <comp lib="0" loc="(70,230)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(410,180)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="width" val="3"/>
-      <a name="label" val="Rt Id"/>
-    </comp>
-    <comp lib="0" loc="(80,170)" name="Pin">
-      <a name="width" val="3"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(360,70)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="width" val="3"/>
-      <a name="label" val="Rt Ex"/>
-    </comp>
     <comp lib="0" loc="(80,370)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="stall"/>
@@ -208,6 +133,106 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="facing" val="south"/>
       <a name="width" val="3"/>
       <a name="label" val="Rs Id"/>
+    </comp>
+    <comp lib="1" loc="(390,450)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(80,170)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(410,180)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="3"/>
+      <a name="label" val="Rt Id"/>
+    </comp>
+    <comp lib="3" loc="(470,220)" name="Comparator">
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(520,110)" name="Tunnel">
+      <a name="label" val="Rs == Rt (Ex)"/>
+    </comp>
+    <comp lib="0" loc="(610,220)" name="Tunnel">
+      <a name="label" val="Rt == Rt (Ex)"/>
+    </comp>
+    <comp lib="0" loc="(110,80)" name="Tunnel">
+      <a name="width" val="3"/>
+      <a name="label" val="Rs Id"/>
+    </comp>
+    <comp lib="0" loc="(470,500)" name="Tunnel">
+      <a name="label" val="Rs == Rt (Ex)"/>
+    </comp>
+    <comp lib="0" loc="(70,230)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(110,120)" name="Tunnel">
+      <a name="width" val="3"/>
+      <a name="label" val="Rt Id"/>
+    </comp>
+    <comp lib="0" loc="(110,170)" name="Tunnel">
+      <a name="width" val="3"/>
+      <a name="label" val="Rt Ex"/>
+    </comp>
+    <comp lib="0" loc="(470,610)" name="Tunnel">
+      <a name="label" val="Mem Read Ex"/>
+    </comp>
+    <comp lib="0" loc="(470,380)" name="Tunnel">
+      <a name="label" val="Rt == Rt (Ex)"/>
+    </comp>
+    <comp lib="3" loc="(470,110)" name="Comparator">
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(370,320)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="Mem Read Id"/>
+    </comp>
+    <comp lib="0" loc="(110,230)" name="Tunnel">
+      <a name="label" val="Mem Read Ex"/>
+    </comp>
+    <comp lib="1" loc="(410,580)" name="OR Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(370,370)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(140,370)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(80,80)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(80,120)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(430,740)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="stall"/>
+    </comp>
+    <comp lib="1" loc="(430,710)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(110,270)" name="Tunnel">
+      <a name="label" val="Mem Read Id"/>
+    </comp>
+    <comp lib="0" loc="(360,180)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="3"/>
+      <a name="label" val="Rt Ex"/>
+    </comp>
+    <comp lib="0" loc="(360,70)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="3"/>
+      <a name="label" val="Rt Ex"/>
+    </comp>
+    <comp lib="0" loc="(70,270)" name="Pin">
+      <a name="tristate" val="false"/>
     </comp>
   </circuit>
 </project>
