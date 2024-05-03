@@ -1,0 +1,18 @@
+addi $1,$0, 5
+addi $2,$0, 7
+addi $3,$0, 15
+addi $4,$0, 14
+sw $1, 0($0)
+sw $2, 1($0)
+sw $3, 2($0)
+sw $4, 3($0)
+lw $5, 0($0)
+jal func
+l1:lui 15
+sw $1, 0($0)
+add $1, $1, $7
+addi $3, $3, 2
+jr $3
+func: add $1, $0, $7
+bne $1, $0, l1
+exit: j exit
