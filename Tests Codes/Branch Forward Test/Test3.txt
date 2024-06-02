@@ -1,0 +1,8 @@
+addi $1, $0,0
+addi $2, $0,3
+l1: bne $1, $2, l2
+sll $3, $2, 2
+j exit
+l2: addi $1, $1, 1
+j l1
+exit: j exit
